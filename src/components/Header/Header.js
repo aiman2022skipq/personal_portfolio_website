@@ -2,11 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
-
-// import ThemeToggler from '../../themes/ThemeToggler';
-import Theme from '../../styles/theme';
+import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span, Checkbox, Label, Ball } from './HeaderStyles';
 
 const Header = () =>  (
   <Container>
@@ -45,7 +44,12 @@ const Header = () =>  (
         <AiFillLinkedin size="3rem"/>
       </SocialIcons>
       <SocialIcons>
-        <Theme size="3rem"/>
+        <Checkbox className="checkbox" type="checkbox" id="checkbox" />
+        <Label htmlFor="checkbox" className="label">
+          <FontAwesomeIcon icon={faSun} style={{color: "#f39c12",}} />
+          <FontAwesomeIcon icon={faMoon} style={{color: "#f1c40f",}} />
+          <Ball />
+        </Label>
       </SocialIcons>
     </Div3>
 
